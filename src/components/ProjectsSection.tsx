@@ -38,6 +38,7 @@ const projects = [
       "Developed a Linear Regression model to predict show revenue and trending performance.",
     ],
     live: "https://cineadda.vercel.app/",
+    github: "https://github.com/Sanjaydsmk/CineAdda",
     color: "from-primary via-accent to-primary",
   },
 ];

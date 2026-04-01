@@ -7,10 +7,10 @@ const ContactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const contacts = [
-    { icon: Mail, label: "Email", value: "sanjayd.contact@gmail.com", href: "mailto:sanjayd.contact@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+91-XXXXXXXXXX", href: "#" },
+    { icon: Mail, label: "Email", value: "sanjaymanikantakumar2005@gmail.com", href: "mailto:sanjaymanikantakumar2005@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91-9944280235", href: "tel:+919944280235" },
     { icon: Github, label: "GitHub", value: "Sanjaydsmk", href: "https://github.com/Sanjaydsmk" },
-    { icon: Linkedin, label: "LinkedIn", value: "sanjay-d", href: "https://linkedin.com/in/sanjay-d-8b230a259" },
+    { icon: Linkedin, label: "LinkedIn", value: "sanjay-dasari", href: "https://www.linkedin.com/in/sanjay-dasari-75336a2a2" },
   ];
 
   return (
@@ -41,14 +41,14 @@ const ContactSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group flex items-center gap-4 p-6 rounded-2xl bg-gradient-card border border-border/50 shadow-card hover:shadow-glow hover:border-primary/30 hover:-translate-y-1 transition-all duration-300"
+              className="group flex items-center gap-4 rounded-2xl border border-border/50 bg-card/85 p-6 shadow-card backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-glow"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                 <c.icon className="text-primary" size={20} />
               </div>
               <div>
                 <p className="text-xs text-muted-foreground">{c.label}</p>
-                <p className="font-medium font-heading group-hover:text-primary transition-colors">{c.value}</p>
+                <p className="font-medium font-heading group-hover:text-primary transition-colors break-all max-w-xs">{c.value}</p>
               </div>
             </motion.a>
           ))}

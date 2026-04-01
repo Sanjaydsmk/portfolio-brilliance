@@ -6,32 +6,32 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 220 25% 10%;
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
-    --primary: 172 66% 50%;
-    --primary-foreground: 220 25% 5%;
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 220 25% 10%;
-    --muted: 220 14% 95%;
-    --muted-foreground: 220 10% 46%;
-    --accent: 262 83% 58%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 188 82% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 20% 38%;
+    --accent: 252 86% 64%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 172 66% 50%;
+    --border: 214 32% 89%;
+    --input: 214 32% 89%;
+    --ring: 188 82% 42%;
     --radius: 0.75rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(172 66% 50%), hsl(262 83% 58%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 96%));
-    --gradient-hero: linear-gradient(135deg, hsl(172 66% 50% / 0.1), hsl(262 83% 58% / 0.1));
-    --shadow-glow: 0 0 30px hsl(172 66% 50% / 0.15);
-    --shadow-card: 0 4px 24px hsl(220 25% 10% / 0.06);
+    --gradient-primary: linear-gradient(135deg, hsl(188 82% 46%), hsl(252 86% 66%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(188 82% 46% / 0.14), hsl(252 86% 66% / 0.12));
+    --shadow-glow: 0 0 32px hsl(188 82% 46% / 0.18);
+    --shadow-card: 0 10px 30px hsl(222 47% 11% / 0.08);
 
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -72,6 +72,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.12), transparent 28%),
+      radial-gradient(circle at bottom right, hsl(var(--accent) / 0.1), transparent 24%);
+    background-attachment: fixed;
+    transition: background-color 300ms ease, color 300ms ease;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
